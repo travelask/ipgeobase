@@ -16,14 +16,14 @@ module Ipgeobase
         Time.now.strftime("%Y%m%d%H%M%S")
       end
 
-      def create_models
+      def create_ipgeobase_models
         [:ip, :region].each do |filename|
           template "#{generator_dir}/ipgeobase/#{filename}.rb",
           File.join("app/models/ipgeobase/#{filename}.rb")
         end
       end
 
-      def create_migration
+      def create_ipgeobase_migration
         if ["active_record"].include?(orm)
           migration_template "#{generator_dir}/migration.rb", File.join('db/migrate', "create_tables_for_ipgeobase.rb")
         end
