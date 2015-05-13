@@ -1,0 +1,17 @@
+PATH
+  remote: .
+  specs:
+    glebtv_ipgeobase (0.1.0)
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    rake (10.4.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bundler
+  glebtv_ipgeobase!
+  rake
