@@ -3,20 +3,17 @@ $:.push File.expand_path("../lib", __FILE__)
 require "ipgeobase/version"
 
 Gem::Specification.new do |s|
-  s.name        = "ipgeobase"
+  s.name        = "glebtv_ipgeobase"
   s.version     = Ipgeobase::VERSION
-  s.authors     = ["Avramov Vsevolod"]
-  s.email       = ["gsevka@gmail.com"]
-  s.homepage    = "http://github.com/vsevolod/ipgeobase"
+  s.authors     = ["glebtv", "Avramov Vsevolod"]
+  s.email       = ["glebtv@gmail.com", "gsevka@gmail.com"]
+  s.homepage    = "http://github.com/glebtv/ipgeobase"
   s.summary     = "upload archive from IPGeoBase.ru to your project"
-
-  s.rubyforge_project = "ipgeobase"
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
 
-  s.add_dependency "ancestry"
-  s.required_ruby_version = '>= 1.9.2'
+  s.required_ruby_version = '>= 2.0.0'
 end

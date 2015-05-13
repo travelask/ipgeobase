@@ -5,21 +5,23 @@
 == Installation
   
 (1) Add to Gemfile:
-    gem 'ipgeobase', :git => 'git@github.com:vsevolod/ipgeobase.git'
+    gem 'ipgeobase', github: 'glebtv/ipgeobase'
 (2) Install required gems:
     bundle install
 (3) Create models
-    rails g ipgeobase:models
+    rails g ipgeobase:migration
 (4) Run migration
     rake db:migrate
 
 == Upload new database
 
 * Update cities and regions from FILE or by URL(default)
-  rails g ipgeobase:upload:cities
+
+  rake ipgeobase:cities
 
 * Update geo ips from FILE or by URL(default)
-  rails g ipgeobase:upload:ips
+
+  rake ipgeobase:ips
 
 == Add relation for models
 
