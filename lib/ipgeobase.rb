@@ -19,7 +19,7 @@ module Ipgeobase
     end
 
     def ip2long(ip)
-      IPAddr.new(ip, Socket::AF_INET).to_i
+      IPAddr.new(ip).to_i
     end
   end
 end
